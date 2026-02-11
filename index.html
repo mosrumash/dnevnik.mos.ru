@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МЭШ - Московская электронная школа</title>
+    <style>
+        /* --- Основные стили страницы --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(180deg, #0099dc 0%, #1e5bf0 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mobile-wrapper {
+            width: 100%;
+            max-width: 480px;
+            background: transparent;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-padding {
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        .style_logo_img__12Sg3 {
+            height: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        h1 {
+            color: white;
+            font-size: 26px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .login-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .btn-login {
+            background-color: #0d5ff0;
+            color: white;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .link-access {
+            color: #0d5ff0;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .info-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .info-text {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .link-details {
+            color: #0d5ff0;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+        }
+
+        .dot.active {
+            background-color: #0d5ff0;
+        }
+
+        .illustration-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .illustration-container img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+        }
+
+        .footer-styled {
+            background-color: #262a3f;
+            padding: 30px 20px;
+            margin-top: auto;
+            color: white;
+            font-weight: 700;
+        }
+
+        .footer-styled a {
+            color: white !important;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-styled svg {
+            fill: white !important;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .footer-styled > div {
+            margin-bottom: 20px;
+        }
+
+        .footer-styled ._3plmm8v0WrNZ-CGSsm7ChQ {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer-styled ._1B4M5Qf0Jp4r7JSgL9tXPm {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-styled button {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            font-weight: 700;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-styled ._1BheaER5vKRJPErDr96xYT {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.4;
+        }
+
+        ._2n7Ua1GM7NSuodkHc-agAA { display: flex; flex-direction: column; gap: 20px;}
+        ._6epJ4fOM2OwZyKY5W455P { display: flex; gap: 20px; margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+
+<div class="mobile-wrapper">
+
+    <div class="content-padding">
+        <header>
+            <div class="style_logo__1xP15">
+                <!-- ✅ ЛОКАЛЬНЫЙ файл logo.svg -->
+                <img class="style_logo_img__12Sg3" src="logo.svg" alt="МЭШ логотип">
+            </div>
+        </header>
+
+        <h1>Цифровое образование <br>в школах Москвы</h1>
+
+        <div class="card">
+            <div class="login-title">Вход</div>
+            <button class="btn-login" onclick="location.href='login.html'">Войти</button>
+            <a href="#" class="link-access">Как получить доступ?</a>
+        </div>
+
+        <div class="card">
+            <div class="info-title">Уважаемые пользователи!</div>
+            <div class="info-text">
+                Для прохода и питания в школе учащиеся могут использовать до 5 идентификаторов «Москвёнок»: брелоки, умные часы и браслеты. Все они равнозначны сервисной карте «Москвёнок», которую выдают в школе.
+            </div>
+            <a href="#" class="link-details">Подробнее</a>
+
+            <div class="slider-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="illustration-container">
+        <!-- ✅ ЛОКАЛЬНЫЙ файл intro.png -->
+        <img src="intro.png" alt="Учителя и ученики МЭШ">
+    </div>
+
+    <div class="footer-styled">
+        <!-- Здесь тот же подвал, без изменений -->
+        <div class=" _18WM3ubfdzxwWqrJhaMTyt _3XZcVfsW29gjSYtVCZaqBc _1xqL9ayhZ_m53Xg3xJ3ZxY"><div class=""><div class=" _2n7Ua1GM7NSuodkHc-agAA _21IkjZQ3b8r0o6oWMn0G6G"><div class=" _3-DpFHjgLu4JhIy_WTKsNJ _2ruRJQGnJIsF4rVDURB2xY _2X-xxbFHRc8ejv38DyvJ9e"><div class=" _6epJ4fOM2OwZyKY5W455P"><a rel="noopener noreferrer" href="https://www.mos.ru/city/projects/mesh/" target="_blank" class=" _3swOyjAZHwVXXCm8YsXyDN _3-LfZKONXDEsnAH9Z-M7V9"><div class="_1jRnCaMjDStc_W9rbhuRXx">О&nbsp;проекте</div></a><a rel="noopener noreferrer" href="https://school.mos.ru/help/documents/termsofusegusoev/" target="_blank" class=" _3swOyjAZHwVXXCm8YsXyDN _3-LfZKONXDEsnAH9Z-M7V9"><div class="_1jRnCaMjDStc_W9rbhuRXx">Польз.&nbsp;соглашение</div></a></div></div><div class=" _3oaLEZrIsf_bXNSFuEVjSt _2xthfy0E8XWkJfmXubSCqF _2lYl8oyv0ypZ9FeNbapc4d"><div class="_22u4GXtDYhWLX4ZkiufLlJ _1svQDr5GvENCZiGXTs98rl akn8c-1c0HC0EU3-sxsRE">Для родителей и учеников</div><a rel="noreferrer" href="tel:+7 (495) 539-55-55" class=" _3plmm8v0WrNZ-CGSsm7ChQ"><svg width="20" height="20" viewBox="0 0 20 20" class=" _3kDrm-8v-Q7fjuZkTB1Be8"><path d="M5.5 3.333A2.169 2.169 0 003.333 5.5c0 6.157 5.01 11.167 11.167 11.167a2.17 2.17 0 002.15-2.44l-3.85-.884c-.077.147-.162.306-.238.454-.38.726-.655 1.252-1.357.97C8.45 13.8 6.201 11.55 5.222 8.762c-.298-.655.269-.951.987-1.326.146-.077.304-.16.448-.234L5.773 3.35a2.17 2.17 0 00-.273-.018zm9 15c-7.077 0-12.833-5.756-12.833-12.833a3.837 3.837 0 015.076-3.627c.27.094.475.322.539.602l1.14 4.97a.831.831 0 01-.21.763c-.114.119-.116.121-1.15.662a8.291 8.291 0 004.066 4.07c.542-1.035.545-1.038.664-1.152a.841.841 0 01.763-.21l4.97 1.14c.28.065.508.268.6.539a3.795 3.795 0 01.207 1.243 3.838 3.838 0 01-3.832 3.833z"></path></svg><div class="nOaBb1-TFuS93DFI0IJ21">+7 (495) 539-55-55</div></a><div class=" Wy5rJ6n3OTUU80tuZKC2r _1B4M5Qf0Jp4r7JSgL9tXPm _1BBwayhjePoZfx7KBIlcr_"><a rel="noopener noreferrer" target="_blank" href="https://vk.ru/ditobr" class=" _17aIy3-tzpZ0MPHFbpOj_k"><svg width="24" height="24" viewBox="0 0 24 24" class=" _25jYweJzJhfHxbzPy_SXn8"><path d="M12.938 18.446c-7.175 0-11.267-4.504-11.438-12h3.594c.118 5.502 2.768 7.832 4.866 8.313V6.446h3.384v4.745c2.073-.204 4.25-2.366 4.985-4.745h3.384c-.564 2.931-2.925 5.093-4.604 5.982 1.679.721 4.368 2.607 5.391 6.018h-3.725c-.8-2.282-2.794-4.048-5.43-4.288v4.288h-.407z"></path></svg></a><a rel="noopener noreferrer" target="_blank" href="https://ok.ru/ditobr" class=" _17aIy3-tzpZ0MPHFbpOj_k"><svg width="20" height="20" viewBox="0 0 20 20" class=" _25jYweJzJhfHxbzPy_SXn8"><path d="M13.008 9.745a.996.996 0 011.364.268.952.952 0 01-.273 1.336 7.017 7.017 0 01-2.08.944l-.059.013-.06.067 2.138 2.394.256.287a.95.95 0 01-.093 1.36.998.998 0 01-1.388-.091l-2.211-2.476-2.19 2.486a.998.998 0 01-1.302.164l-.085-.065a.95.95 0 01-.102-1.36l2.372-2.69-.073-.08a6.997 6.997 0 01-2.117-.953.952.952 0 01-.273-1.336.996.996 0 011.364-.268c.83.542 1.627.802 2.406.802.78 0 1.576-.26 2.405-.802z"></path><path d="M10.602 9.583a3.542 3.542 0 110-7.083 3.542 3.542 0 010 7.083zm0-2.107a1.435 1.435 0 100-2.87 1.435 1.435 0 000 2.87z"></path></svg></a></div></div><div class=" _3oaLEZrIsf_bXNSFuEVjSt _2xthfy0E8XWkJfmXubSCqF _2lYl8oyv0ypZ9FeNbapc4d"><div class="_22u4GXtDYhWLX4ZkiufLlJ _1svQDr5GvENCZiGXTs98rl akn8c-1c0HC0EU3-sxsRE">Для сотрудников</div><a rel="noreferrer" href="tel:+7 (495) 539-38-38" class=" _3plmm8v0WrNZ-CGSsm7ChQ"><svg width="20" height="20" viewBox="0 0 20 20" class=" _3kDrm-8v-Q7fjuZkTB1Be8"><path d="M5.5 3.333A2.169 2.169 0 003.333 5.5c0 6.157 5.01 11.167 11.167 11.167a2.17 2.17 0 002.15-2.44l-3.85-.884c-.077.147-.162.306-.238.454-.38.726-.655 1.252-1.357.97C8.45 13.8 6.201 11.55 5.222 8.762c-.298-.655.269-.951.987-1.326.146-.077.304-.16.448-.234L5.773 3.35a2.17 2.17 0 00-.273-.018zm9 15c-7.077 0-12.833-5.756-12.833-12.833a3.837 3.837 0 015.076-3.627c.27.094.475.322.539.602l1.14 4.97a.831.831 0 01-.21.763c-.114.119-.116.121-1.15.662a8.291 8.291 0 004.066 4.07c.542-1.035.545-1.038.664-1.152a.841.841 0 01.763-.21l4.97 1.14c.28.065.508.268.6.539a3.795 3.795 0 01.207 1.243 3.838 3.838 0 01-3.832 3.833z"></path></svg><div class="nOaBb1-TFuS93DFI0IJ21">+7 (495) 539-38-38</div></a><div class=" Wy5rJ6n3OTUU80tuZKC2r _1B4M5Qf0Jp4r7JSgL9tXPm _1BBwayhjePoZfx7KBIlcr_"><a rel="noopener noreferrer" target="_blank" href="https://vk.ru/mes21" class=" _17aIy3-tzpZ0MPHFbpOj_k"><svg width="24" height="24" viewBox="0 0 24 24" class=" _25jYweJzJhfHxbzPy_SXn8"><path d="M12.938 18.446c-7.175 0-11.267-4.504-11.438-12h3.594c.118 5.502 2.768 7.832 4.866 8.313V6.446h3.384v4.745c2.073-.204 4.25-2.366 4.985-4.745h3.384c-.564 2.931-2.925 5.093-4.604 5.982 1.679.721 4.368 2.607 5.391 6.018h-3.725c-.8-2.282-2.794-4.048-5.43-4.288v4.288h-.407z"></path></svg></a><a rel="noopener noreferrer" target="_blank" href="https://t.me/+0fQ9OnaaC1owNWVi" class=" _17aIy3-tzpZ0MPHFbpOj_k"><svg width="20" height="20" viewBox="0 0 20 20" class=" _25jYweJzJhfHxbzPy_SXn8"><path d="M2.698 9.763c4.026-1.835 6.711-3.044 8.055-3.628 3.836-1.669 4.633-1.959 5.152-1.968.114-.002.37.027.535.168.14.118.179.278.197.39.018.113.041.37.023.57-.208 2.284-1.107 7.826-1.565 10.384-.193 1.083-.575 1.446-.944 1.481-.802.077-1.41-.554-2.188-1.087-1.215-.833-1.902-1.352-3.082-2.165-1.364-.94-.48-1.456.297-2.3.204-.221 3.738-3.583 3.806-3.888.009-.038.017-.18-.064-.255-.08-.075-.2-.05-.286-.03-.122.03-2.064 1.372-5.826 4.028-.551.396-1.05.588-1.498.578-.493-.01-1.442-.291-2.147-.531-.865-.294-1.552-.45-1.493-.949.032-.26.374-.526 1.028-.798z"></path></svg></a></div></div><div class=" _3Y0RDWzHsJrpwZhZkTOAoa _3x4kTWY9kNhA0haDv2VMwN -XJtaNeJM3cXCZUatUv3_"><button type="button" class="_3zjod5FkfdF4zkT1-VL1xu _8tHUhGdzO_rPhp8e1x9iy _1PnLXO51HLQC6cRPe0SZoH _2sR2Khv7MN05L77ywjwWC9"><div class=" _1CvPKHKHS2Gd3Ynx44JCw9">Написать нам</div></button></div></div><div class=" _2UPP2LINSh6EHPBBWAIAoh ds5qKfDOa1lqCBEMbmkyt"><svg width="14" height="14" viewBox="0 0 14 14" class=" _3L35csCVm3T1QcyOcLfLr8 _2_rd_ui2_8nLPL3SMXSF6E"><path fill="#87879B" d="M7 1.1c2.4 0 4.6 1.4 5.5 3.7s.4 4.8-1.3 6.5c-1.5 1.5-3.7 2.1-5.8 1.6-2.1-.5-3.7-2.2-4.2-4.2-.5-2.2.1-4.4 1.6-5.9C3.9 1.7 5.4 1.1 7 1.1zM7 0C3.1 0 0 3.1 0 7s3.1 7 7 7 7-3.1 7-7c0-1.9-.7-3.6-2.1-4.9C10.6.7 8.9 0 7 0zm2.2 8.8c-.8.9-2 1.3-3.2.9C4.9 9.3 4.2 8.2 4.2 7S5 4.7 6.1 4.3c1.1-.4 2.4 0 3.2.9l.7-.6C9 3.3 7.3 2.8 5.7 3.3c-1.6.6-2.6 2-2.6 3.7 0 1.7 1 3.1 2.6 3.7 1.6.5 3.3 0 4.3-1.3l-.8-.6z"></path></svg><div class="_1BheaER5vKRJPErDr96xYT">Департамент образования и науки города Москвы<br><span>.&nbsp;</span>Департамент информационных технологий города Москвы</div></div><div class="_3aXO9h3M_Q7FlP51ylqeWJ _1H9WXwYEYHKrON0CRkIFj6"><div class="_1BheaER5vKRJPErDr96xYT">Версия&nbsp;3.33.2.1</div></div></div><div></div><div></div></div>
+    </div>
+</div>
+
+</body>
+</html>
